@@ -14,7 +14,7 @@ Simply add as immediate children all those components that you want to be in dif
   import Row from './row.js';
   
   let Example = React.createClass({
-    displayName : `Example`,
+    displayName : 'Example',
     render() {
       <div className="example">
         <Row>
