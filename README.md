@@ -16,13 +16,15 @@ Simply add as immediate children all those components that you want to be in dif
   let Example = React.createClass({
     displayName : 'Example',
     render() {
-      <div className="example">
-        <Row>
-          <section>My block 1</section>
-          <section>My block 2</section>
-          <section>My block 3</section>
-        </Row>
-      </div>
+      return (
+        <div className="example">
+          <Row>
+            <section>My block 1</section>
+            <section>My block 2</section>
+            <section>My block 3</section>
+          </Row>
+        </div>
+      );
     }
   });
   
