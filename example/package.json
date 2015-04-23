@@ -1,0 +1,19 @@
+{
+  "name": "react-row-example",
+  "version": "0.0.1",
+  "description": "This is an example of React Row usage.",
+  "devDependencies": {
+    "jsx-loader": "^0.12.x",
+    "babel-loader" : "^4.x.x",
+    "bundle-loader": "^0.5.0",
+    "sass-loader": "^0.x.x",
+    "webpack": "^1.x.x",
+    "webpack-dev-server": "^1.x.x"
+  },
+  "dependencies": {
+    "react": "0.13.x",
+    "react-draggable": "0.x.x"
+  },
+  "author": "renemonroy",
+  "license": "MIT"
+}
