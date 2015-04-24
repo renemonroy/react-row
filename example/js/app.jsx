@@ -9,7 +9,7 @@ let App = React.createClass({
     var st = this.state;
     return (
       <div {...this.props} className="app">
-        <Row>
+        <Row rowName="example">
           <p>Column 1</p>
           <p>Column 2</p>
           <p>Column 3</p>
