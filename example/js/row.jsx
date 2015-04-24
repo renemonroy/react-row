@@ -51,7 +51,7 @@ let Row = React.createClass({
    * Sets initial variables, which is only 'resizable' for now. 
    */
   getDefaultProps() {
-    return { rowName : null, resizable : true };
+    return { rowName : null, resizable : false };
   },
 
   /**
@@ -65,7 +65,7 @@ let Row = React.createClass({
       var colName = rowName + 'col-' + i,
         cachedWidth = localStorage.getItem(colName),
         colWidth = (cachedWidth !== null) ? parseInt(cachedWidth, 10) : (comp.props.colWidth || null);
-      if ( (i > 0) && row.props.resizable ) {
+      if ( (i > 0) && row.props.resizable === 'true' ) {
         cols.push(
           <Draggable key={ colName + 'handler-' + i } axis='x' zIndex={1} start={{ x : 0, y: 0 }} onDrag={row._onHandlerDrag.bind(row, i)}>
             <div><div className="handler-icon"></div></div>
