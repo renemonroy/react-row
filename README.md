@@ -2,7 +2,7 @@
 React component created to build complex layouts based on rows and columns (optionally resizable) throught the use of **flex**.
 
 ## Overview
-The idea is simple. You add children components to a `<Row />` and each child will be appended into columns. Each `<Column />` act as container where its dimension is calculated automatically by changing flex values. Requires **react/addons** if `resizable` prop is set to `true`.
+The idea is simple. You add children components to a `<Row />` and each child will be appended into columns. Each `<Column />` act as container where its dimension is calculated automatically by changing flex values. Requires **react-draggable** to support resizing.
 
 ## Usage
 Simply add as immediate children all those components that you want to be in different columns.
@@ -46,5 +46,43 @@ The code above will render something like this:
         <section>My block 3</section>
       </div>
     </div>
+  </div>
+```
+
+## Props
+
+* **resizable** - To make all columns resizable inside a Row. Is set `false` by default.
+
+```javascript
+  <div className="app">
+    <Row resizable="true">
+      <p>Column 1</p>
+      <p>Column 2</p>
+      <p>Column 3</p>
+    </Row>
+  </div>
+```
+
+* **rowName** - To remember the width of each columns, just add a rowName to each row component. This uses localStorage to cache values.
+
+```javascript
+  <div className="app">
+    <Row rowName="first-row">
+      <p>Column 1</p>
+      <p>Column 2</p>
+      <p>Column 3</p>
+    </Row>
+  </div>
+```
+
+* **colWidth** - Pass a `colWidth` in px to immediate child component to set an initial width to a column and make all others flexible. This will work only the first time if `rowName` is set to remember dimensions.
+
+```javascript
+  <div className="app">
+    <Row>
+      <p>Column 1</p>
+      <p colWidth="100">Column 2</p>
+      <p>Column 3</p>
+    </Row>
   </div>
 ```
