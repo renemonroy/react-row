@@ -2,7 +2,9 @@
 React component created to build complex layouts based on rows and columns (optionally resizable) throught the use of **flex**.
 
 ## Overview
-The idea is simple. You add children components to a `<Row />` and each child will be appended into columns. Each `<Column />` act as container where its dimension is calculated automatically by changing flex values. Requires **react-draggable** to support resizing.
+The idea is simple. You add children components to a `<Row />` and each child will be appended into columns. Each `<Column />` act as container where its dimension is calculated automatically by changing flex values.
+
+Requires **react-draggable** to support resizing and the code is written using ES6 with Babel. A module blunder like Webpack will be needed.
 
 ## Usage
 Simply add as immediate children all those components that you want to be in different columns.
@@ -86,3 +88,10 @@ The code above will render something like this:
     </Row>
   </div>
 ```
+
+## Example
+
+To run the example you need [Node.js](https://nodejs.org/) installed and [Webpack](http://webpack.github.io/) dev server.
+
+1. On the example folder run `npm install` to install dev dependencies and loaders.
+2. And then exec `webpack-dev-server --progress --colors`, this will run a server on `localhost:8080`.
