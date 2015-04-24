@@ -95,3 +95,8 @@ To run the example you need [Node.js](https://nodejs.org/) installed and [Webpac
 
 1. On the example folder run `npm install` to install dev dependencies and loaders.
 2. And then exec `webpack-dev-server --progress --colors`, this will run a server on `localhost:8080`.
+
+## TODOs
+
+* Pack dist file to NPM
+* Use `react-style` to put styles inline instead of depending of CSS
