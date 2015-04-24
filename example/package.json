@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "react": "0.13.x",
-    "react-draggable": "0.x.x"
+    "react-draggable" : "0.x.x"
   },
   "author": "renemonroy",
   "license": "MIT"

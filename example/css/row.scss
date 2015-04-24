@@ -1,0 +1,38 @@
+.row {
+  position : relative;
+  display : -webkit-flex;
+  display : -ms-flexbox;
+  display : flex;
+  -webkit-flex-wrap : wrap;
+  -ms-flex-wrap : wrap;
+  flex-wrap : wrap;
+  width : 100%;
+  -webkit-flex-shrink : 0;
+  -ms-flex-negative : 0;
+  flex-shrink : 0;
+
+  &> .column {
+    position : relative;
+    flex : 1;
+  }
+
+  &> .react-draggable {
+    position : relative;
+    cursor : col-resize;
+    width : 5px;
+    left : 0 !important;
+    border-left : 1px solid #d1d1d1;
+    border-right : 1px solid #d1d1d1;
+    background-color : #fff;
+    justify-content: center;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+
+    &> .handler-icon {
+      width : 1px;
+      height : 15px;
+      border-right : 1px dotted #a1a1a1;
+    }
+  }
+}
